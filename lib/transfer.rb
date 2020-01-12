@@ -33,6 +33,7 @@ class Transfer
   def reverse_transfer
     @sender.balance = self.amount + @sender.balance
     @receiver.balance = @receiver.balance - self.amount
+    self.status = "reversed"
   end
 
 end
